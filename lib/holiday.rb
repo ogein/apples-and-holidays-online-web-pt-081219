@@ -1,13 +1,11 @@
-require 'pry'
+fruits = ["apple", "orange", "apple"]
 
-#This is the groceries hash we'll be passing in to the get_the_values method
-# groceries = {
-#  dairy: ["milk", "yogurt", "cheese"],
-#  vegetable: ["carrots", "broccoli", "cucumbers"],
-#  meat: ["chicken", "steak", "salmon"],
-#  grains: ["rice", "pasta"]
-# }
+# Write your code here.
 
-def get_the_values(groceries)
-  groceries.values.flatten
+def apple_picker_with_select(fruit_array)
+  fruit_array.select { |item| item == "apple" }
+end
+
+def apple_picker_with_collect(fruit_array)
+  fruit_array.collect { |item| item if item == "apple" }.compact
 end
